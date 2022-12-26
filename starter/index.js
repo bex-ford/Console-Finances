@@ -121,6 +121,6 @@ for (var i = 0; i < netArray.length; i++){
 
 average = Math.round((netChangeSum / 86) * 100) / 100 
 
-analysis = "Financial Analysis" + "\n" + "Total Months: " + totalMonths + "\n" + "Total: " + profitTotal + "\n" + "Average Change: " + average + "\n" + "Greatest Increase in Profits: " + greatestIncrease[0] + " " + greatestIncrease[1] + "\n" + "Greatest Decrease in Profits: " + greatestDecrease[0] + " " + greatestDecrease[1] 
+analysis = "Financial Analysis" + "\n" + "Total Months: " + totalMonths + "\n" + "Total: " + "$" + profitTotal + "\n" + "Average Change: " + "$" + average + "\n" + "Greatest Increase in Profits: " + greatestIncrease[0] + " " + greatestIncrease[1] + "\n" + "Greatest Decrease in Profits: " + greatestDecrease[0] + " " + greatestDecrease[1] 
 console.log(analysis)
 
