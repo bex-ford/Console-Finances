@@ -86,3 +86,65 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+var totalMonths = finances.length;
+var netTotal = 0
+var average 
+var greatestIncrease = ["", 0]
+var greatestDecrease = ["", 9999999]
+var profitChange = 0
+var profitTotal = 0
+var analysis 
+var netArray = []
+var netChangeSum = 0
+
+for (var i = 0; i < finances.length; i++){
+  for (var j = 0; j < finances[i].length; j++){
+    if (typeof finances[i][j] !== "string"){
+        profitTotal += finances[i][j]
+        profitChange = finances[i][j] - netTotal
+        netTotal = finances[i][j]
+        netArray.push(profitChange)
+        
+        if (profitChange > greatestIncrease[1]){
+            greatestIncrease =[finances[i][0],finances[i][1]]
+        }
+        if (profitChange < greatestDecrease[1]){
+            greatestDecrease =[finances[i][0], finances[i][1]]
+        }
+    }
+  }
+}
+for (var i = 0; i < netArray.length; i++){
+    netChangeSum += netArray[i]
+}
+
+average = Math.round((netChangeSum / 86) * 100) / 100 
+
+analysis = "Financial Analysis" + "\n" + "Total Months " + totalMonths + "\n" + "Total " + profitTotal + "\n" + "Average Change " + average + "\n" + "Greatest Increase " + greatestIncrease[0] + " " + greatestIncrease[1] + "\n" + "Greatest Decrease " + greatestDecrease[0] + " " + greatestDecrease[1] 
+console.log(analysis)
+
+
+// The total number of months included in the dataset.
+// figure out how many rows there are in the finances variable
+// The net total amount of Profit/Losses over the entire period.
+// add everything together
+// probably a loop
+// The average of the changes in Profit/Losses over the entire period.
+// calculate each change by subtracting the previous month from this month
+// You will need to track what the total change in profits is from month to month and then find the average.
+// (Total/total number of changes) ===> total change/(months - 1)
+// maybe put all the changes into an array? using .push(...) ?
+// The greatest increase in profits (date and amount) over the entire period.
+// start with 0
+//   check the last increase. If it's bigger than 0, keep track of the new biggest one.
+//   in a loop
+// The greatest decrease in losses (date and amount) over the entire period.
+// console output format!
+// Financial Analysis
+// ----------------------------
+// Total Months: 25
+// Total: $2561231
+// Average  Change: $-2315.12
+// Greatest Increase in Profits: Feb-2012 ($1926159)
+// Greatest Decrease in Profits: Sep-2013 ($-2196167)
