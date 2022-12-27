@@ -14,8 +14,17 @@
 
 
 **What i learned from completing this project:**
+Firstly i created a list of variables 
 
-![ALT]()
+![variables](assets/variables.png)
+
+I created for loops 
+
+![forLoops](assets/forloop.png)
+
+Lastly i c
+
+![console.log](assets/consolelog.png)
 
 
 ## GitHub
