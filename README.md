@@ -14,15 +14,23 @@
 
 
 **What i learned from completing this project:**
-Firstly i created a list of variables 
+
+I learned how important it is to plan out the structure of your code prior to starting, this is done by *pseudo* code. This really helped navigate my code. 
+
+
+Firstly i created a list of variables.
+
+Variables are containers for storing data. 
 
 ![variables](assets/variables.png)
 
-I created for loops 
+I created *for* loops. **For** loops, loops through a block of code a number of times.
+
+*if* statement is used to specify a block of code to be executed, if a specific condition is true. 
 
 ![forLoops](assets/forloop.png)
 
-Lastly i c
+Lastly i used *console.log()*. This is a method in the browser to display data.
 
 ![console.log](assets/consolelog.png)
 
